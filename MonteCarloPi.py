@@ -35,8 +35,8 @@ def estimate_pi_vectorized(n):
         
 
 def main():
-    n_points = 1000000
-    n_processes = 10
+    n_points = 1_00_00_00
+    n_processes = 20
     start_time = time.time()
 
     with multiprocessing.Pool(n_processes) as pool:
@@ -55,10 +55,10 @@ def main():
 
     
     print("2. Vectorized Operations Implementation")
-    start_time = time.time()
+    start_time_v = time.time()
     print("Estimated value of pi:", estimate_pi_vectorized(n_points))
-    end_time = time.time()
-    print("Time taken:", round((end_time - start_time), 6), "seconds")
+    end_time_v = time.time()
+    print("Time taken:", round((end_time_v - start_time_v), 6), "seconds")
     
 
 
